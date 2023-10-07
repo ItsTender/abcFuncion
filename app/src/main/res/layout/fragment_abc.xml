@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".abcFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/etAnum"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="123dp"
+            android:layout_marginBottom="18dp"
+            android:ems="10"
+            android:hint="ENTER 'a'"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/etBnum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etBnum"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="ENTER'b'"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/etCnum"
+            app:layout_constraintEnd_toEndOf="@+id/etCnum"
+            app:layout_constraintStart_toStartOf="@+id/etCnum"
+            app:layout_constraintTop_toBottomOf="@+id/etAnum" />
+
+        <EditText
+            android:id="@+id/etCnum"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="80dp"
+            android:ems="10"
+            android:hint="ENTER 'c'"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/btnCalc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etBnum" />
+
+        <Button
+            android:id="@+id/btnCalc"
+            android:layout_width="125dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="77dp"
+            android:text="Number of Solutions"
+            app:layout_constraintBottom_toTopOf="@+id/Sol1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCnum" />
+
+        <TextView
+            android:id="@+id/Sol1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/Sol2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCalc" />
+
+        <TextView
+            android:id="@+id/Sol2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="158dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Sol1"
+            app:layout_constraintStart_toStartOf="@+id/Sol1"
+            app:layout_constraintTop_toBottomOf="@+id/Sol1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
